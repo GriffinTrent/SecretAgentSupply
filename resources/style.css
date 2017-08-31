@@ -121,19 +121,23 @@ nav span {
 	background-color: white;
 	flex-direction: column;
 	border: 1px solid red;
+	flex-wrap: wrap;
 }
 
 .grid-master {
 	display: flex;
 	justify-content: center;
 	border: 1px solid red;
+	width: 100%;
+	flex-wrap: wrap;
 }
 
 .grid {
 	display: flex;
 	flex-direction: row;
 	margin: 3rem 3rem;
-	justify-content: center;
+	justify-content: space-between;
+	width: 60%;
 }
 
 .grid-img {
@@ -148,6 +152,7 @@ nav span {
 }
 
 .grid-img img{
+	width: 30%;
 	padding: 2rem 2rem 2rem 2rem;
 	height: 9rem;
 	width: 9rem;
@@ -170,22 +175,72 @@ nav span {
 }
 
 .grid-2 {
-	width: 35%;
+	width: 25%;
 	height: 3rem;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	align-self: center;
 	background-color: black;
+	margin-left: 4rem;
+	margin-right: 4rem;
+	flex-wrap: wrap;
+
 }
 
 .black {
 	display: flex;
-	justify-content: space-between;
+	justify-content: left;
 	flex-direction: row;
 	width: 35%;
-	display: block;
 	color: white;
-	vertical-align: center;
 	margin-top: 1rem;
+	flex-wrap: wrap;
+}
+
+.grid-3{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-left: 4rem;
+	margin-right: 4rem;
+	margin-bottom: 4rem;
+	vertical-align: top;
+		flex-wrap: wrap;
+}
+
+.white {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	width: 35%;
+	color: black;
+	margin-right: 4.5rem;
+	flex-wrap: wrap;
+}
+
+.white span {
+	margin-right: 5rem;
+}
+
+.footer-container {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	background-color: black;
+	height: 5rem;
+}
+
+.footer-master {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 55%
+}
+
+.footer {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	color: white;
+	background-color: black;
 }
