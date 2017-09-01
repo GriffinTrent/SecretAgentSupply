@@ -9,13 +9,13 @@ body {
 	justify-content: center;
 	background-color: black;
 	flex-direction: column;
-	border: 1px solid red;
+	
 }
 
 .container{
 	display: flex;
 	justify-content: center;
-	border: 1px solid red;
+	width: 100%;
 }
 
 .headline {
@@ -26,14 +26,13 @@ body {
 	font-size: 1rem;
 	vertical-align: middle;
 	justify-content: flex-start;
-	border: 1px solid red;
+	
 }
 
 .headline img {
 	display: flex;
 	height: 1.5rem;
-	margin: .66rem 1rem .66rem .5rem;
-	border: 1px solid red;
+	margin: .66rem 1rem .66rem .5rem;	
 }
 
 .headline span {
@@ -42,7 +41,7 @@ body {
 	font-size: 1rem;
 	justify-content: center;
 	align-items: center;
-	border: 1px solid red;
+	
 }
 
 .site-2 {
@@ -50,7 +49,7 @@ body {
 	width: 100%;
 	justify-content: center;
 	flex-direction: column;
-	border: 1px solid red;
+	
 
 }
 
@@ -66,8 +65,8 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	border: 1px solid red;
 	flex-direction: column;
+	width: 100%;
 }
 
 .hero-box {
@@ -102,12 +101,25 @@ body {
 
 nav {
 	display: flex;
-	width: 100%
+	width: 100%;
 	font-size: 1rem;
 	color: white;
 	padding: .75rem 3rem .75rem 3rem;
 	background-color: firebrick;
 	justify-content: center;
+}
+
+.navi-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.navi-master {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	width: 100%
 }
 
 nav span {
@@ -120,14 +132,12 @@ nav span {
 	justify-content: center;
 	background-color: white;
 	flex-direction: column;
-	border: 1px solid red;
 	flex-wrap: wrap;
 }
 
 .grid-master {
 	display: flex;
 	justify-content: center;
-	border: 1px solid red;
 	width: 100%;
 	flex-wrap: wrap;
 }
@@ -138,6 +148,7 @@ nav span {
 	margin: 3rem 3rem;
 	justify-content: space-between;
 	width: 60%;
+	overflow: hidden;
 }
 
 .grid-img {
@@ -149,13 +160,15 @@ nav span {
 	margin-right: 1.5rem;
 	border: 4px solid black;
 	justify-content: flex-end;
+	overflow: hidden;
 }
 
 .grid-img img{
-	width: 30%;
 	padding: 2rem 2rem 2rem 2rem;
 	height: 9rem;
 	width: 9rem;
+	max-width: 100%;
+	height: auto;
 }
 
 #glasses img {
@@ -183,6 +196,7 @@ nav span {
 	background-color: black;
 	margin-left: 4rem;
 	margin-right: 4rem;
+	margin-bottom: 4rem;
 	flex-wrap: wrap;
 
 }
@@ -205,7 +219,7 @@ nav span {
 	margin-right: 4rem;
 	margin-bottom: 4rem;
 	vertical-align: top;
-		flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 
 .white {
@@ -218,8 +232,20 @@ nav span {
 	flex-wrap: wrap;
 }
 
-.white span {
-	margin-right: 5rem;
+.white span{
+	display: flex;
+	justify-content: left;
+	margin-top: 3rem;
+}
+
+#hours {
+	position: relative;
+	right: 185px;
+}
+
+#coordinates {
+	position: relative;
+	right: 150px;
 }
 
 .footer-container {
@@ -243,4 +269,139 @@ nav span {
 	align-items: center;
 	color: white;
 	background-color: black;
+}
+
+.menu-toggle{
+	display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+	#glasses,
+		.hide{
+		display: none;
+	}
+	nav span{
+		display: block;
+	}
+	.menu-toggle{
+	display: block;
+	text-decoration: none;
+	color: white;
+	}
+
+	.headline{
+			display: flex;
+			justify-content: center;
+			position: relative;
+		}
+
+		.hero-box {
+			display: flex;
+			justify-content: center;
+		}
+
+	.grid-container {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	.grid-master {
+		display: flex;
+		width: 100%;
+		right: 40%;
+		justify-content: space-between;
+
+	}
+
+	.grid {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+
+	}
+
+	.grid img{
+		display: flex;
+		justify-content: space-between;
+		width: 47%;
+	}
+
+	.white span {
+	position: relative;
+	left: 150px;
+}
+
+	#coordinates{
+		position: relative;
+		margin-bottom: 200px;
+	}
+
+	.hero-box {
+		position: relative;
+		right: 200px;
+	}
+
+
+}
+
+@media only screen and (max-width: 470px) {
+	.headline span{
+		display: none;
+	}
+
+	.headline img {
+		display: flex;
+		justify-content: center;
+	}
+
+	.hero-box {
+		display: flex;
+		justify-content: center;
+		margin-top: 209px;
+		width: 90%;
+		margin-left: 198px;
+	}
+
+	.grid {
+		display: flex;
+		justify-content: center;
+		width: 90%;
+	}
+
+	#watch {
+		display: none;
+	}
+
+	#pen {
+		display: flex;
+		justify-content: center;
+		align-self: center;
+		align-items: center;
+		width: 90%;
+	}
+
+	.grid-2 {
+		width: 90%;
+	}
+
+	.black {
+		padding-left: 1rem;
+	}
+
+	.coordinates {
+		position: relative;
+		padding-right: 20px;
+	}
+	
+	.footer {
+		display: flex;
+		justify-content: center;
+		vertical-align: middle;
+	}
+
+	.footer span {
+		display: flex;
+		justify-content: center;
+	}
 }
